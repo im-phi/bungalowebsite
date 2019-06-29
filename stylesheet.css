@@ -1,0 +1,115 @@
+body{
+	background: black;
+	margin: 0;
+}
+
+#background {
+	width: 90%;
+    left: -26%;
+    top: -13%;
+    z-index: -1;
+    position: fixed;
+    opacity: 0.4;
+}
+
+#Bungalo {
+    margin-bottom: 2%;
+    width: 30%;
+	padding: 25px;
+}
+
+.nardoandvid {
+	position: relative;
+    padding-bottom: 26%;
+}
+
+.nardo {
+	margin: auto;
+    position: absolute;
+    left: 49%;
+    top: 23%;
+    width: 28%;
+}
+iframe { 
+	margin: 0 auto;
+}
+
+#mitti {
+	width: 60%;
+	padding: 25px;
+}
+
+.section {
+	padding-bottom: 16%;
+}
+ 
+.header {
+    text-align: center;
+    color: #FCA3FC;
+    font-size: 3.5em;
+    font-weight: 600;
+    padding: 2%;
+}
+
+.subtext {
+    text-align: center;
+    color: #FCA3FC;
+    font-size: 1.3em;
+    margin-left: 32%;
+    margin-right: 32%;
+}
+
+.addtocart {
+    color: #FCA3FC;
+    font-size: 1.3em;
+    border: solid;
+    border-color: #FCA3FC;
+    text-align: center;
+    padding: 8px 20px 8px 20px;
+	width: 125px;
+	margin: auto;
+	display: block;
+	transition: 0.2s;
+}
+
+.addtocart:hover {
+	background: #FCA3FC;
+	color: black;
+}
+
+.soundcloud-iframe {
+    height: 500px;
+}
+
+#music-section {
+    margin: auto;
+    width: 56%;
+}
+.video {
+	display: block;
+    margin: auto;
+    border: solid;
+    position: absolute;
+    left: 26%;
+    border-color: #dc94f3;
+    width: 27%;
+    height: 78%;
+}
+
+.center {
+	display: block;
+	margin: auto;
+}
+
+.left {
+	display: inline-block;
+	margin: auto;
+	padding: 20px;
+	width: 28%;
+}
+
+@media only screen and (max-width: 370px) {
+	#bg {
+		width: 100%;
+	}
+}
