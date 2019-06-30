@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #FCA3FC;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: none;
+    text-decoration: none;
+}
+
 body{
 	background: black;
-	margin: 0;
+    font-family: "Playfair Display";
 }
 
 #background {
@@ -13,54 +30,81 @@ body{
 }
 
 #Bungalo {
-    margin-bottom: 2%;
-    width: 30%;
-	padding: 25px;
+    width: 27%;
+	padding: 25px 25px 15px 25px;
+}
+
+.navbar {
+    text-align: center;
+    font: bold 1.6em "Playfair Display";
+    word-spacing: 60px;
+    padding: 15px;
+}
+
+.navbar ul{
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li{
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: line-through;
+}
+
+.navbar a:hover{
+    color: #3D003D;
+    transition: .2s;
 }
 
 .nardoandvid {
 	position: relative;
     padding-bottom: 26%;
+    margin: 80px;
 }
 
 .nardo {
 	margin: auto;
     position: absolute;
-    left: 49%;
+    left: 47%;
     top: 23%;
     width: 28%;
 }
+
 iframe { 
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    border: #FCA3FC 2px solid;
+    width: 80%;
 }
 
 #mitti {
-	width: 60%;
+	width: 35%;
 	padding: 25px;
 }
 
 .section {
-	padding-bottom: 16%;
+	padding-bottom: 8%;
 }
  
 .header {
     text-align: center;
-    color: #FCA3FC;
-    font-size: 3.5em;
+    font-size: 1.6em;
     font-weight: 600;
-    padding: 2%;
+    padding: .9%;
 }
 
 .subtext {
     text-align: center;
-    color: #FCA3FC;
-    font-size: 1.3em;
-    margin-left: 32%;
-    margin-right: 32%;
+    font-size: .85em;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 
 .addtocart {
-    color: #FCA3FC;
     font-size: 1.3em;
     border: solid;
     border-color: #FCA3FC;
@@ -103,7 +147,7 @@ iframe {
 
 .left {
 	display: inline-block;
-	margin: auto;
+	margin: 5%;
 	padding: 20px;
 	width: 28%;
 }
