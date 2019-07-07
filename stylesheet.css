@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
 
+/* _____________________________________ */
+/* _____________________________________ */
+/* __________UNIVERSAL STYLING__________ */
+/* _____________________________________ */
+
 * {
     padding: 0;
     margin: 0;
@@ -18,15 +23,6 @@ a:visited{
 body{
 	background: black;
     font-family: "Playfair Display";
-}
-
-#background {
-	width: 90%;
-    left: -26%;
-    top: -13%;
-    z-index: -1;
-    position: fixed;
-    opacity: 0.4;
 }
 
 #Bungalo {
@@ -60,6 +56,56 @@ body{
     transition: .2s;
 }
 
+.section {
+	padding-bottom: 8%;
+}
+ 
+.header {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 600;
+    padding: .9%;
+}
+
+.subtext {
+    text-align: center;
+    font-size: .85em;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.center {
+	display: block;
+	margin: auto;
+}
+
+.left {
+	display: inline-block;
+	margin: 5%;
+	padding: 20px;
+	width: 28%;
+}
+
+@media only screen and (max-width: 370px) {
+	#bg {
+		width: 100%;
+	}
+}
+
+/* _____________________________________ */
+/* _____________________________________ */
+/* ____________HOME STYLING_____________ */
+/* _____________________________________ */
+
+#background {
+	width: 90%;
+    left: -26%;
+    top: -13%;
+    z-index: -1;
+    position: fixed;
+    opacity: 0.4;
+}
+
 .nardoandvid {
 	position: relative;
     padding-bottom: 26%;
@@ -84,24 +130,6 @@ iframe {
 #mitti {
 	width: 35%;
 	padding: 25px;
-}
-
-.section {
-	padding-bottom: 8%;
-}
- 
-.header {
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: 600;
-    padding: .9%;
-}
-
-.subtext {
-    text-align: center;
-    font-size: .85em;
-    margin-left: 40%;
-    margin-right: 40%;
 }
 
 .addtocart {
@@ -129,6 +157,7 @@ iframe {
     margin: auto;
     width: 56%;
 }
+
 .video {
 	display: block;
     margin: auto;
@@ -138,22 +167,4 @@ iframe {
     border-color: #dc94f3;
     width: 27%;
     height: 78%;
-}
-
-.center {
-	display: block;
-	margin: auto;
-}
-
-.left {
-	display: inline-block;
-	margin: 5%;
-	padding: 20px;
-	width: 28%;
-}
-
-@media only screen and (max-width: 370px) {
-	#bg {
-		width: 100%;
-	}
 }
