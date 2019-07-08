@@ -1,10 +1,9 @@
 $( document ).ready(function() {
     $("#about").click(function() {
-          $("#main-content").load( "about.html", function() {
+            $("#main-content").load( "about.html", function() {
         });
     });
 });
-
 
 ;(function() {
     var throttle = function(type, name, obj) {
