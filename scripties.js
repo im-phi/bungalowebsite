@@ -1,3 +1,11 @@
+$( document ).ready(function() {
+    $("#about").click(function() {
+          $("#main-content").load( "about.html", function() {
+        });
+    });
+});
+
+
 ;(function() {
     var throttle = function(type, name, obj) {
         var obj = obj || window;
@@ -18,5 +26,11 @@
 
 
 window.addEventListener("optimizedScroll", function() { 
-    $("#background").css('-webkit-transform','rotate('+($(window).scrollTop()/8)+'deg)');
+    if(window.location.href != "/index.html#about"){
+        $("#background").css('-webkit-transform','rotate('+($(window).scrollTop()/8)+'deg)');
+    }
 });
+
+
+ 
+

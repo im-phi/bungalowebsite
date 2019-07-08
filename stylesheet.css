@@ -47,9 +47,18 @@ body{
     display: inline;
 }
 
-.navbar a {
+.navbar li:nth-child(1) {
     text-decoration: line-through;
 }
+
+.navbar li:nth-child(2) {
+    text-decoration: line-through;
+}
+
+.navbar li:nth-child(4) {
+    text-decoration: line-through;
+}
+
 
 .navbar a:hover{
     color: #3D003D;
@@ -104,6 +113,10 @@ body{
     z-index: -1;
     position: fixed;
     opacity: 0.4;
+}
+
+.background-center {
+    
 }
 
 .nardoandvid {
