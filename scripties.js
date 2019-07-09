@@ -30,6 +30,3 @@ window.addEventListener("optimizedScroll", function() {
     }
 });
 
-
- 
-

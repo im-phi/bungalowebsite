@@ -119,6 +119,13 @@ body{
     
 }
 
+#circle-animation {
+    position: fixed;
+    width: 10%;
+    right: 0;
+    top: 0;
+    padding: 1em;
+}
 .nardoandvid {
 	position: relative;
     padding-bottom: 26%;
