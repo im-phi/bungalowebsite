@@ -44,6 +44,7 @@ body{
 }
 
 .navbar li{
+    cursor: pointer;
     display: inline;
 }
 
@@ -194,3 +195,12 @@ iframe {
 /* ____________ABOUT STYLING____________ */
 /* _____________________________________ */
 
+#about-button-container > button {
+    font: bold 1.6em "Playfair Display";
+    background-color: transparent;
+    height: 103px;
+    width: 103px;
+    border: 2px dashed #FCA3FC;
+    border-radius: 50%;
+    outline: none;
+}
