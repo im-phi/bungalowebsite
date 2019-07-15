@@ -37,38 +37,36 @@ function requestContent(file) {
     $("#main-content").load(file + " #main-content");
 }
 
-window.onload = function(){
-    var content = document.querySelector('#main-content'),
-        nav_container = document.querySelector('.navbar ul');
+var content = document.querySelector('#main-content'),
+    nav_container = document.querySelector('.navbar ul');
 
-    // Pushes the state of the window to browser history and loads content on-click
-    nav_container.addEventListener('click', function(e) {
-        if (e.target != e.currentTarget) {
-            e.preventDefault();
-            // e.target is the link inside the navbar we just clicked.
+// Pushes the state of the window to browser history and loads content on-click
+nav_container.addEventListener('click', function(e) {
+    if (e.target != e.currentTarget) {
+        e.preventDefault();
+        // e.target is the link inside the navbar we just clicked.
 
-            var data = e.target.getAttribute('id'),
-            url = data + ".html";
-            requestContent(url);
-            window.history.pushState(data, null, url);
-        }
-        e.stopPropagation();
-    }, false);
+        var data = e.target.getAttribute('id'),
+        url = data + ".html";
+        requestContent(url);
+        window.history.pushState(data, null, url);
+    }
+    e.stopPropagation();
+}, false);
 
-    // Pops the second to last state on back-button press
-    window.addEventListener('popstate', function(e) {
-        // e.state is equal to the data-attribute of the last link we clicked
-        var instance = e.state;
+// Pops the second to last state on back-button press
+window.addEventListener('popstate', function(e) {
+    // e.state is equal to the data-attribute of the last link we clicked
+    var instance = e.state;
 
-        // Loads index if no index state is stored
-        if (instance == null) {
-            requestContent("index.html");
-        } else {
-            requestContent(instance + ".html");
-            document.title = "Bungalo | " + instance;
-        }
-    });
-}
+    // Loads index if no index state is stored
+    if (instance == null) {
+        requestContent("index.html");
+    } else {
+        requestContent(instance + ".html");
+        document.title = "Bungalo | " + instance;
+    }
+});
 
 
 /* _____________________________________ */
