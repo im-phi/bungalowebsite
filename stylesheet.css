@@ -5,6 +5,27 @@
 /* __________UNIVERSAL STYLING__________ */
 /* _____________________________________ */
 
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #3D003D; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(173, 0, 173); 
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(41, 0, 41); 
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -195,12 +216,17 @@ iframe {
 /* ____________ABOUT STYLING____________ */
 /* _____________________________________ */
 
+#about-button-container {
+    margin: auto;
+    width: 50%;
+}
 #about-button-container > button {
-    font: bold 1.6em "Playfair Display";
+    font: bold 1.4em "Playfair Display";
     background-color: transparent;
-    height: 103px;
-    width: 103px;
+    height: 93px;
+    width: 93px;
     border: 2px dashed #FCA3FC;
     border-radius: 50%;
     outline: none;
+    cursor: pointer;
 }

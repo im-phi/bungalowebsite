@@ -1,3 +1,8 @@
+/* _____________________________________ */
+/* _____________________________________ */
+/* __________GLOBAL SCRIPTS_____________ */
+/* _____________________________________ */
+
 ;(function() {
     var throttle = function(type, name, obj) {
         var obj = obj || window;
@@ -33,12 +38,8 @@ function requestContent(file) {
 }
 
 window.onload = function(){
-    var textWrapper = document.querySelector('.wrapper'),
-        content = document.querySelector('#main-content'),
+    var content = document.querySelector('#main-content'),
         nav_container = document.querySelector('.navbar ul');
-    function updateText(content){
-        textWrapper.innerHTML = content;
-    }
 
     // Pushes the state of the window to browser history and loads content on-click
     nav_container.addEventListener('click', function(e) {
@@ -75,12 +76,4 @@ window.onload = function(){
 /* __________ABOUT PAGE SCRIPTS_________ */
 /* _____________________________________ */
 
-// $( document ).ready(function() {
-//     $("#about").click(function() {
-//             $("#main-content").load( "about.html #main-content", function() {
-//                 window.history.pushState('html', 'about', '/about.html');
-//             }
-//         );
-//     });
-// });
 
