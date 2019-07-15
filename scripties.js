@@ -28,41 +28,47 @@ window.addEventListener("optimizedScroll", function() {
 /* __________NAVBAR SCRIPTS_____________ */
 /* _____________________________________ */
 
+function requestContent(file) {
+    $("#main-content").load(file + " #main-content");
+}
+
 window.onload = function(){
-    var nav_container = document.querySelector('.navbar ul');
-    
+    var textWrapper = document.querySelector('.wrapper'),
+        content = document.querySelector('#main-content'),
+        nav_container = document.querySelector('.navbar ul');
+    function updateText(content){
+        textWrapper.innerHTML = content;
+    }
+
+    // Pushes the state of the window to browser history and loads content on-click
     nav_container.addEventListener('click', function(e) {
         if (e.target != e.currentTarget) {
             e.preventDefault();
             // e.target is the link inside the navbar we just clicked.
+
             var data = e.target.getAttribute('id'),
             url = data + ".html";
-            $("#main-content").load(url +" #main-content", function() {
-                window.history.pushState(data, null, url);
-            });
+            requestContent(url);
+            window.history.pushState(data, null, url);
         }
         e.stopPropagation();
     }, false);
 
+    // Pops the second to last state on back-button press
     window.addEventListener('popstate', function(e) {
-        // e.state is equal to the data-attribute of the last image we clicked
+        // e.state is equal to the data-attribute of the last link we clicked
         var instance = e.state;
 
+        // Loads index if no index state is stored
         if (instance == null) {
-            textWrapper.innerHTML = " ";
-            content.innerHTML = " ";
-            document.title = defaultTitle;
+            requestContent("index.html");
         } else {
-            updateText(instance);
             requestContent(instance + ".html");
             document.title = "Bungalo | " + instance;
         }
     });
 }
 
-function requestContent(file) {
-    $('.#main-content').load(file + ' #main-content');
-}
 
 /* _____________________________________ */
 /* _____________________________________ */
