@@ -24,7 +24,8 @@
 
 window.addEventListener("optimizedScroll", function() { 
     if(window.location.href != "/index.html#about"){
-        $("#background").css('-webkit-transform','rotate('+($(window).scrollTop()/8)+'deg)');
+        // Added spin class just for rotating the spiral
+        $(".spin").css('-webkit-transform','rotate('+($(window).scrollTop()/8)+'deg)');
     }
 });
 

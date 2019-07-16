@@ -255,7 +255,7 @@ iframe {
 }
 
 #background.about-clicked{
-    /* position: absolute; */
+    position: absolute;
     text-align: center;
 	/* width: 465px;
     left: 50%; */
