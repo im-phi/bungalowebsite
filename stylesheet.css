@@ -42,8 +42,24 @@ a:visited{
 }
 
 body{
+    /* overflow: hidden; */
 	background: black;
     font-family: "Playfair Display";
+}
+
+#main-content {
+    display: none;
+}
+
+#background {
+	width: 90%;
+    left: -26%;
+    top: -13%;
+    z-index: -1;
+    position: fixed;
+    opacity: 0.4;
+    transition: transform 700ms ease-in-out;
+    pointer-events: none;
 }
 
 #Bungalo {
@@ -128,19 +144,6 @@ body{
 /* ____________HOME STYLING_____________ */
 /* _____________________________________ */
 
-#background {
-	width: 90%;
-    left: -26%;
-    top: -13%;
-    z-index: -1;
-    position: fixed;
-    opacity: 0.4;
-}
-
-.background-center {
-    
-}
-
 #circle-animation {
     position: fixed;
     width: 10%;
@@ -216,10 +219,18 @@ iframe {
 /* ____________ABOUT STYLING____________ */
 /* _____________________________________ */
 
-#about-button-container {
-    margin: auto;
-    width: 50%;
+#slogan {
+    font-size: 1.4em;
+    position: absolute;
+    top: 40%;
+    left: 13%;
 }
+
+#about-button-container {
+    text-align: center;
+    margin: 50px 0px;
+}
+
 #about-button-container > button {
     font: bold 1.4em "Playfair Display";
     background-color: transparent;
@@ -229,4 +240,26 @@ iframe {
     border-radius: 50%;
     outline: none;
     cursor: pointer;
+}
+
+#film {
+    position: relative;
+    top: 325px;
+    right: 115px;
+}
+
+#dance {
+    position: relative;
+    top: 325px;
+    left: 115px;
+}
+
+#background.about-clicked{
+    /* position: absolute; */
+    text-align: center;
+	/* width: 465px;
+    left: 50%; */
+    /* left: 50%;
+    top: 525px; */
+    transform: translate(-50%, -50%);
 }
