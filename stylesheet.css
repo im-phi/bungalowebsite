@@ -228,10 +228,12 @@ iframe {
 
 #about-button-container {
     text-align: center;
-    margin: 50px 0px;
+    margin: 100px 0px;
 }
 
-#about-button-container > button {
+.btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
     font: bold 1.4em "Playfair Display";
     background-color: transparent;
     height: 93px;
@@ -242,18 +244,66 @@ iframe {
     cursor: pointer;
 }
 
+/* "what button are we on" active */
+.button-active {
+    color: black;
+    background-color: #FCA3FC;
+    border-color: black;
+}
+
+/* Click active */
+#about-button-container > .btn:active {
+    color: #FCA3FC;
+    background-color: transparent;
+    border-color: #FCA3FC;
+    transition: 200ms ease-out;
+}
+
+#about-button-container > button:hover{
+    color: black;
+    background-color: #FCA3FC;
+    border-color: black;
+    transition: 200ms ease-out;
+}
+
+#music {
+    /* position: relative; */
+    top: 300px;
+}
+
 #film {
-    position: relative;
-    top: 325px;
-    right: 115px;
+    /* position: relative; */
+    top: 645px;
+    left: 760px;
 }
 
 #dance {
-    position: relative;
-    top: 325px;
-    left: 115px;
+    /* position: relative; */
+    top: 645px;
+    right: 665px;
 }
 
+/* .about-sublink-clicked {
+
+}
+
+@keyframes toCenter {
+
+}
+
+@keyframes toTop {
+
+}
+
+@keyframes toLeft {
+
+}
+
+@keyframes toRight {
+    
+} */
+
+/* Spiral animation class */
 #background.about-clicked{
     position: absolute;
     text-align: center;

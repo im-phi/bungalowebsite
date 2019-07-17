@@ -70,20 +70,20 @@ function animateBackground(data) {
                 duration: 900, 
                 easing: "swing", 
             });
-            $("#background").attr("class", "");
+            $("#background").attr("class", "spin");
         // default:
         //     $("#background").attr("class", "");
     }
 }
 
 var content = document.querySelector('#content-container'),
-    nav_container = document.querySelector('.navbar ul');
+    navContainer = document.querySelector('.navbar ul');
 
 // Pushes the state of the window to browser history and loads content on-click
-nav_container.addEventListener('click', function(e) {
+navContainer.addEventListener('click', function(e) {
     if (e.target != e.currentTarget) {
 
-        // ATTEMPTS TO DELETE TRANSLATE PROPERTY BUT IT'S NOT WORKING.....
+        // Deletes .spin class to replace with animation
         $('html,body').scrollTop(0);
 
         var rotateStyle = document.getElementById('background');
@@ -124,7 +124,7 @@ window.addEventListener('popstate', function(e) {
     } else {
         $("#main-content").fadeOut(900, requestContent(instance + ".html"));
         animateBackground(instance);
-        document.title = "Bungalo | " + instance;
+        // document.title = "Bungalo | " + instance;
     }
 });
 
@@ -138,3 +138,16 @@ $(window).on("load", function(){
 /* _____________________________________ */
 /* __________ABOUT PAGE SCRIPTS_________ */
 /* _____________________________________ */
+
+$(window).on("load", function(){
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("about-button-container");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("button-active");
+            current[0].className = current[0].className.replace(" button-active", "");
+            this.className += " button-active";
+        });
+    }
+})
