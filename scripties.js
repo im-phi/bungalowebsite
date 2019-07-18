@@ -42,7 +42,12 @@ $(document).ready(function(){
 
 function requestContent(file) {
     $("#content-container").load(file + " #main-content", function(){
-        $("#main-content").fadeIn(2000);
+        switch(file){
+            case "about.html":
+                $("#main-content").fadeIn(2000, activeAbout());
+            default:
+                $("#main-content").fadeIn(2000);
+        }
     });
 }
 
@@ -103,7 +108,7 @@ navContainer.addEventListener('click', function(e) {
         // Will edit if statement as we work on the other nav links
         if(data === "about"){
             $("#main-content").fadeOut(900, requestContent(url));
-            window.history.pushState(data, null, url);
+            window.history.pushState(data, null, url);            
         }
     }
     e.stopPropagation();
@@ -132,22 +137,26 @@ $(window).on("load", function(){
     var path = window.location.pathname;
     if(path.includes("about")){
         animateBackground("about");
+        activeAbout();
     }
-})
+});
+
 /* _____________________________________ */
 /* _____________________________________ */
 /* __________ABOUT PAGE SCRIPTS_________ */
 /* _____________________________________ */
 
-$(window).on("load", function(){
+function activeAbout(){
     // Add active class to the current button (highlight it)
     var header = document.getElementById("about-button-container");
     var btns = header.getElementsByClassName("btn");
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function() {
             var current = document.getElementsByClassName("button-active");
-            current[0].className = current[0].className.replace(" button-active", "");
+            if($(current[0]).hasClass("button-active")){
+                current[0].className = current[0].className.replace(" button-active", "");
+            }
             this.className += " button-active";
         });
     }
-})
+}
