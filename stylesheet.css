@@ -52,6 +52,7 @@ body{
 }
 
 #background {
+    will-change: transform;
 	width: 90%;
     left: -26%;
     top: -13%;
@@ -65,6 +66,10 @@ body{
 #Bungalo {
     width: 27%;
 	padding: 25px 25px 15px 25px;
+}
+
+#circle-animation{
+    will-change: transform;
 }
 
 .navbar {
@@ -305,6 +310,7 @@ iframe {
 
 /* Spiral animation class */
 #background.about-clicked{
+    will-change: transform;
     position: absolute;
     text-align: center;
 	/* width: 465px;

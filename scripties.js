@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 /* _____________________________________ */
 /* _____________________________________ */
-/* __________NAVBAR SCRIPTS_____________ */
+/* ________NAVBAR/AJAX SCRIPTS__________ */
 /* _____________________________________ */
 
 function requestContent(file) {
@@ -146,8 +146,8 @@ $(window).on("load", function(){
 /* __________ABOUT PAGE SCRIPTS_________ */
 /* _____________________________________ */
 
+// Add active class to the current button (highlight it)
 function activeAbout(){
-    // Add active class to the current button (highlight it)
     var header = document.getElementById("about-button-container");
     var btns = header.getElementsByClassName("btn");
     for (var i = 0; i < btns.length; i++) {
