@@ -232,13 +232,15 @@ iframe {
 }
 
 #about-button-container {
-    text-align: center;
-    margin: 100px 0px;
+    position: relative;
+    margin: 90px 0px;
 }
 
 .btn {
     position: absolute;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    /* transform: translate(-50%, -50%); */
+    /* transform: translateY(25px); */
     font: bold 1.4em "Playfair Display";
     background-color: transparent;
     height: 93px;
@@ -271,42 +273,85 @@ iframe {
     transition: 200ms ease-out;
 }
 
-#music {
-    /* position: relative; */
-    top: 300px;
+.music {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
-#film {
-    /* position: relative; */
-    top: 645px;
-    left: 760px;
+.film {
+    top: 700px;
+    right: 21%;
+    bottom: 0;
+    left: 0;
 }
 
-#dance {
-    /* position: relative; */
-    top: 645px;
-    right: 665px;
+.dance {
+    top: 700px;
+    right: 0;
+    bottom: 0;
+    left: 21%;
 }
 
-/* .about-sublink-clicked {
-
+/* Animation Classes */
+.abt-top {
+    animation-name: toTop;
+    animation-duration: 3s;
+    animation-fill-mode: forwards
 }
 
-@keyframes toCenter {
-
+.abt-left {
+    animation-name: toLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
+.abt-right {
+    animation-name: toRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes for Animations */
 @keyframes toTop {
-
+    25%, 50% {
+        top: 465px;
+        right: 0;
+        left: 0;
+    }
+    to {
+        top: 0;
+        right: 0;
+        left: 0;
+    }
 }
 
 @keyframes toLeft {
-
+    25%, 50% {
+        top: 465px;
+        right: 0;
+        left: 0;
+    }
+    to {
+        top: 900px;
+        right: 72%;
+        left: 0;
+    }
 }
 
 @keyframes toRight {
-    
-} */
+    25%, 50% {
+        top: 465px;
+        right: 0;
+        left: 0;
+    }
+    to {
+        top: 900px;
+        right: 0;
+        left: 72%;
+    }
+}
 
 /* Spiral animation class */
 #background.about-clicked{

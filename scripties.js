@@ -57,6 +57,7 @@ function animateBackground(data) {
         case "about":
             $("#background").animate({
                 width: "465px",
+                // width: "1600px",
                 left: "50%",
                 top: "57%",
             }, { 
@@ -146,10 +147,12 @@ $(window).on("load", function(){
 /* __________ABOUT PAGE SCRIPTS_________ */
 /* _____________________________________ */
 
-// Add active class to the current button (highlight it)
+// About page is currently active
 function activeAbout(){
+    // Add active class to the current button (highlight it)
     var header = document.getElementById("about-button-container");
     var btns = header.getElementsByClassName("btn");
+    var keyframes = ["abt-left", "abt-right", "abt-top"];
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function() {
             var current = document.getElementsByClassName("button-active");
@@ -157,6 +160,35 @@ function activeAbout(){
                 current[0].className = current[0].className.replace(" button-active", "");
             }
             this.className += " button-active";
+            
+            // for(var k = 0; k < keyframes.length; k++){
+            //     if($(btns[i]).hasClass(keyframes[k])){
+            //         btns[i].className.replace(" " + keyframes[k], "");
+            //     }
+            // }
+            // this.className += " abt-top";
+            
+            // if(btns[i] != this){
+            //     $(btns[i]).className += keyframes[kfCounter];
+            //     kfCounter++;
+            //     console.log(keyframes[kfCounter]);
+            // }
+            
+            // var kfCounter = 0;
+            // for(var j = 0; j < btns.length; j++){
+            //     for(var k = 0; k < keyframes.length; k++){
+            //         if($(btns[j]).hasClass(keyframes[k])){
+            //             btns[j].className.replace(" "+ keyframes[k], "");
+            //             console.log(btns[j].className + " **" + keyframes[k]);
+            //         }
+            //     }
+                
+            //     if(btns[j] != this){
+            //         btns[j].className += " " + keyframes[kfCounter];
+            //         kfCounter++;
+            //     }
+            // }
+            // this.className += " abt-top";
         });
     }
 }
