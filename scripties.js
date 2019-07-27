@@ -98,11 +98,6 @@ navContainer.addEventListener('click', function(e) {
         // e.target is the link inside the navbar we just clicked.
         e.preventDefault();
 
-        // Scroll to top on click
-        // $('html, body').animate({
-        //     scrollTop: $("#Bungalo").offset().top
-        // });
-
         var data = e.target.getAttribute('id'),
             url = data + ".html";
         
@@ -149,46 +144,86 @@ $(window).on("load", function(){
 
 // About page is currently active
 function activeAbout(){
-    // Add active class to the current button (highlight it)
     var header = document.getElementById("about-button-container");
     var btns = header.getElementsByClassName("btn");
     var keyframes = ["abt-left", "abt-right", "abt-top"];
+    var locations = ["loc-left", "loc-right", "loc-top"];
+    
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function() {
+
+            // Adds active class to the current button (highlight it)
             var current = document.getElementsByClassName("button-active");
             if($(current[0]).hasClass("button-active")){
                 current[0].className = current[0].className.replace(" button-active", "");
             }
             this.className += " button-active";
-            
-            // for(var k = 0; k < keyframes.length; k++){
-            //     if($(btns[i]).hasClass(keyframes[k])){
-            //         btns[i].className.replace(" " + keyframes[k], "");
-            //     }
-            // }
-            // this.className += " abt-top";
-            
-            // if(btns[i] != this){
-            //     $(btns[i]).className += keyframes[kfCounter];
-            //     kfCounter++;
-            //     console.log(keyframes[kfCounter]);
-            // }
-            
-            // var kfCounter = 0;
-            // for(var j = 0; j < btns.length; j++){
-            //     for(var k = 0; k < keyframes.length; k++){
-            //         if($(btns[j]).hasClass(keyframes[k])){
-            //             btns[j].className.replace(" "+ keyframes[k], "");
-            //             console.log(btns[j].className + " **" + keyframes[k]);
-            //         }
-            //     }
-                
-            //     if(btns[j] != this){
-            //         btns[j].className += " " + keyframes[kfCounter];
-            //         kfCounter++;
-            //     }
-            // }
-            // this.className += " abt-top";
+
+            // Animates buttons
+            (async () => {
+                var kfCounter = 0;
+
+                let removeAni = () => {
+                    for(var j = 0; j < btns.length; j++){
+                        for(var k = 0; k < keyframes.length; k++){
+                            if($(btns[j]).hasClass(keyframes[k])){
+                                btns[j].className = btns[j].className.replace(" " + keyframes[k], "");
+                                btns[j].className += " " + locations[k];
+                            }
+                        }
+                    }
+                }
+
+                // This function is fucking spaghetti dont even try to understand this
+                // Debugging: Button staying in one place bc index cannot be same for keyframe+locations
+                let addAni = () => {
+                    for(var j = 0; j < btns.length; j++){
+                        if(btns[j] != this){
+                            if($(btns[j]).hasClass("loc-left") && kfCounter === 0){
+                                btns[j].className += " " + keyframes[kfCounter + 1];
+                                console.log(kfCounter + " LEFT");
+                                kfCounter--;
+                            }
+                            // else if($(btns[j]).hasClass("loc-right") && kfCounter === 1){
+                            //     btns[j].className += " " + keyframes[kfCounter - 1];
+                            //     console.log(btns[j].className + " " + kfCounter + " RIGHT");
+                            //     kfCounter -= 1;
+                            // }
+                            // else if($(btns[j]).hasClass("loc-right") && kfCounter === 1){
+                            //     var $element = $(".loc-right").bind("animationend", function(){
+                            //         this.style.AnimationName = "";
+                            //     });
+                                
+                            //     $('.btn').click(function(){
+                            //         $element.css('AnimationName', 'toRight');
+                            //         // you'll probably want to preventDefault here.
+                            //     });
+                            // }
+                            else{
+                                btns[j].className += " " + keyframes[kfCounter];
+                                console.log(kfCounter + " ??");
+                            }
+                            kfCounter++;
+                        }
+                    }
+                    this.className += " abt-top";
+                }
+
+                await removeAni();
+                await addAni();
+
+            })();
+        });
+
+        // Deletes previous destination location for animation
+        btns[i].addEventListener("animationend", function(){
+            for(var j = 0; j < btns.length; j++){
+                for(var k = 0; k < keyframes.length; k++){
+                    if($(btns[j]).hasClass(locations[k])){
+                        btns[j].className = btns[j].className.replace(" "+ locations[k], "");
+                    }
+                }
+            }
         });
     }
 }

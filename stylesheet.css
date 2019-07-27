@@ -256,6 +256,7 @@ iframe {
     color: black;
     background-color: #FCA3FC;
     border-color: black;
+    z-index: 999;
 }
 
 /* Click active */
@@ -273,6 +274,7 @@ iframe {
     transition: 200ms ease-out;
 }
 
+/* Initial button locations */
 .music {
     top: 0;
     right: 0;
@@ -294,28 +296,47 @@ iframe {
     left: 21%;
 }
 
+/* Destination button locations */
+.loc-top {
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.loc-left {
+    top: 900px;
+    right: 72%;
+    left: 0;
+}
+
+.loc-right {
+    top: 900px;
+    right: 0;
+    left: 72%;
+}
+
 /* Animation Classes */
 .abt-top {
     animation-name: toTop;
-    animation-duration: 3s;
+    animation-duration: 1.25s;
     animation-fill-mode: forwards
 }
 
 .abt-left {
     animation-name: toLeft;
-    animation-duration: 3s;
+    animation-duration: 1.25s;
     animation-fill-mode: forwards;
 }
 
 .abt-right {
     animation-name: toRight;
-    animation-duration: 3s;
+    animation-duration: 1.25s;
     animation-fill-mode: forwards;
 }
 
 /* Keyframes for Animations */
 @keyframes toTop {
-    25%, 50% {
+    40%, 70% {
         top: 465px;
         right: 0;
         left: 0;
@@ -328,7 +349,7 @@ iframe {
 }
 
 @keyframes toLeft {
-    25%, 50% {
+    40%, 70% {
         top: 465px;
         right: 0;
         left: 0;
@@ -341,7 +362,7 @@ iframe {
 }
 
 @keyframes toRight {
-    25%, 50% {
+    40%, 70% {
         top: 465px;
         right: 0;
         left: 0;
