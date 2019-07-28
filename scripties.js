@@ -150,7 +150,7 @@ function activeAbout(){
     var locations = ["loc-left", "loc-right", "loc-top"];
     
     for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
+        btns[i].addEventListener("click", function(e) {
 
             // Adds active class to the current button (highlight it)
             var current = document.getElementsByClassName("button-active");
@@ -160,60 +160,54 @@ function activeAbout(){
             this.className += " button-active";
 
             // Animates buttons
-            (async () => {
-                var kfCounter = 0;
+            if(!$(e.currentTarget).hasClass("abt-top")){
+                (async () => {
+                    var kfCounter = 0;
 
-                let removeAni = () => {
-                    for(var j = 0; j < btns.length; j++){
-                        for(var k = 0; k < keyframes.length; k++){
-                            if($(btns[j]).hasClass(keyframes[k])){
-                                btns[j].className = btns[j].className.replace(" " + keyframes[k], "");
-                                btns[j].className += " " + locations[k];
+                    let removeAni = () => {
+                        for(var j = 0; j < btns.length; j++){
+                            for(var k = 0; k < keyframes.length; k++){
+                                if($(btns[j]).hasClass(keyframes[k])){
+                                    btns[j].className = btns[j].className.replace(" " + keyframes[k], "");
+                                    btns[j].className += " " + locations[k];
+                                }
                             }
                         }
                     }
-                }
 
-                // This function is fucking spaghetti dont even try to understand this
-                // Debugging: Button staying in one place bc index cannot be same for keyframe+locations
-                let addAni = () => {
-                    for(var j = 0; j < btns.length; j++){
-                        if(btns[j] != this){
-                            if($(btns[j]).hasClass("loc-left") && kfCounter === 0){
-                                btns[j].className += " " + keyframes[kfCounter + 1];
-                                console.log(kfCounter + " LEFT");
-                                kfCounter--;
+                    // This function is fucking spaghetti dont even try to understand this
+                    // Cycles through each button to figure out new positioning
+                    let addAni = () => {
+                        for(var j = 0; j < btns.length; j++){
+                            if(btns[j] != this){
+                                if($(btns[j]).hasClass("loc-left") && kfCounter === 0){
+                                    btns[j].className += " " + keyframes[kfCounter + 1];
+                                    // console.log(kfCounter + " LEFT");
+                                    kfCounter--;
+                                }
+                                else if($(btns[j]).hasClass("loc-right") && kfCounter === 1){
+                                    // vv This line triggers reflow to restart animation
+                                    void btns[j].offsetWidth;
+                                    btns[j].className += " " + keyframes[kfCounter];
+                                    // console.log(btns[j].className + " " + kfCounter + " RIGHT");
+                                }
+                                else{
+                                    btns[j].className += " " + keyframes[kfCounter];
+                                    // console.log(kfCounter + " ??");
+                                }
+                                kfCounter++;
                             }
-                            // else if($(btns[j]).hasClass("loc-right") && kfCounter === 1){
-                            //     btns[j].className += " " + keyframes[kfCounter - 1];
-                            //     console.log(btns[j].className + " " + kfCounter + " RIGHT");
-                            //     kfCounter -= 1;
-                            // }
-                            // else if($(btns[j]).hasClass("loc-right") && kfCounter === 1){
-                            //     var $element = $(".loc-right").bind("animationend", function(){
-                            //         this.style.AnimationName = "";
-                            //     });
-                                
-                            //     $('.btn').click(function(){
-                            //         $element.css('AnimationName', 'toRight');
-                            //         // you'll probably want to preventDefault here.
-                            //     });
-                            // }
-                            else{
-                                btns[j].className += " " + keyframes[kfCounter];
-                                console.log(kfCounter + " ??");
-                            }
-                            kfCounter++;
                         }
+                        this.className += " abt-top";
                     }
-                    this.className += " abt-top";
-                }
 
-                await removeAni();
-                await addAni();
+                    await removeAni();
+                    await addAni();
 
-            })();
-        });
+                })();
+            }
+        }
+        );
 
         // Deletes previous destination location for animation
         btns[i].addEventListener("animationend", function(){
