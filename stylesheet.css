@@ -170,7 +170,7 @@ body{
     width: 28%;
 }
 
-iframe { 
+.home-iframe { 
     display: block;
     margin: 0 auto;
     border: #FCA3FC 2px solid;
@@ -276,6 +276,7 @@ iframe {
 
 /* Initial button locations */
 .music {
+    will-change: transform;
     top: 0;
     right: 0;
     bottom: 0;
@@ -283,6 +284,7 @@ iframe {
 }
 
 .film {
+    will-change: transform;
     top: 700px;
     right: 21%;
     bottom: 0;
@@ -290,6 +292,7 @@ iframe {
 }
 
 .dance {
+    will-change: transform;
     top: 700px;
     right: 0;
     bottom: 0;
@@ -384,4 +387,41 @@ iframe {
     /* left: 50%;
     top: 525px; */
     transform: translate(-50%, -50%);
+}
+
+.iframe-center {
+    display: none;
+    padding: 40px;
+    text-align: center;
+}
+
+.desmond, .aku {
+    /* visibility: hidden; */
+    width: 25%;
+    height: 300px;
+    display: inline-block;
+    margin: 10px;
+    border: #FCA3FC 2px solid;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: .8s;
+    animation-fill-mode: forwards
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: .8s;
+    animation-fill-mode: forwards
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }

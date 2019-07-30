@@ -129,6 +129,7 @@ window.addEventListener('popstate', function(e) {
     }
 });
 
+// Reanimates in case of refresh on about.html
 $(window).on("load", function(){
     var path = window.location.pathname;
     if(path.includes("about")){
@@ -158,9 +159,10 @@ function activeAbout(){
                 current[0].className = current[0].className.replace(" button-active", "");
             }
             this.className += " button-active";
-
+            
             // Animates buttons
             if(!$(e.currentTarget).hasClass("abt-top")){
+
                 (async () => {
                     var kfCounter = 0;
 
@@ -200,24 +202,36 @@ function activeAbout(){
                         }
                         this.className += " abt-top";
                     }
-
+                    
                     await removeAni();
                     await addAni();
 
                 })();
+                
+                $(".iframe-center").fadeOut(500, function(){
+                    // Loads in content
+                    if($(e.currentTarget).hasClass("music")){
+                        var iframes = document.getElementsByClassName("deferred-iframe");
+                        iframes[0].onload = function(){
+                            iframes[1].onload = $(".iframe-center").fadeIn(800);
+                        }
+                        iframes[0].src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/20292982&color=%23fca3fc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+                        iframes[1].src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/516171873&color=%23fca3fc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+                        // $(".iframe-center").fadeIn(800);
+                    }
+                });
             }
-        }
-        );
 
-        // Deletes previous destination location for animation
-        btns[i].addEventListener("animationend", function(){
-            for(var j = 0; j < btns.length; j++){
-                for(var k = 0; k < keyframes.length; k++){
-                    if($(btns[j]).hasClass(locations[k])){
-                        btns[j].className = btns[j].className.replace(" "+ locations[k], "");
+            e.currentTarget.addEventListener("animationend", function(e){
+                // Deletes previous destination location for animating
+                for(var j = 0; j < btns.length; j++){
+                    for(var k = 0; k < keyframes.length; k++){
+                        if($(btns[j]).hasClass(locations[k])){
+                            btns[j].className = btns[j].className.replace(" "+ locations[k], "");
+                        }
                     }
                 }
-            }
+            });
         });
     }
 }
