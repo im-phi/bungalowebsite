@@ -32,7 +32,7 @@ window.addEventListener("optimizedScroll", function() {
 
 // Fade in content on landing 
 $(document).ready(function(){
-    $("#main-content").fadeIn(1200);
+    $("#main-content").fadeIn(1000);
 });
 
 /* _____________________________________ */
@@ -44,9 +44,11 @@ function requestContent(file) {
     $("#content-container").load(file + " #main-content", function(){
         switch(file){
             case "about.html":
-                $("#main-content").fadeIn(2000, activeAbout());
+                activeAbout();
+                $("#main-content").fadeIn(500);
+
             default:
-                $("#main-content").fadeIn(2000);
+                $("#main-content").fadeIn(500);
         }
     });
 }
@@ -55,7 +57,7 @@ function animateBackground(data) {
     // Toggles & animates background spiral: on navbar link click
     switch(data){
         case "about":
-            $("#background").animate({
+            $("#background").velocity({
                 width: "465px",
                 // width: "1600px",
                 left: "50%",
@@ -68,7 +70,7 @@ function animateBackground(data) {
         break;
         
         case "index":
-            $("#background").animate({
+            $("#background").velocity({
                 width: "90%",
                 left: "-26%",
                 top: "-13%",
@@ -103,7 +105,8 @@ navContainer.addEventListener('click', function(e) {
         
         // Will edit if statement as we work on the other nav links
         if(data === "about"){
-            $("#main-content").fadeOut(900, requestContent(url));
+            // $("#main-content").fadeOut(900, requestContent(url));
+            requestContent(url);
             window.history.pushState(data, null, url);            
         }
     }
@@ -133,8 +136,8 @@ window.addEventListener('popstate', function(e) {
 $(window).on("load", function(){
     var path = window.location.pathname;
     if(path.includes("about")){
-        animateBackground("about");
         activeAbout();
+        animateBackground("about");
     }
 });
 
@@ -177,6 +180,21 @@ function activeAbout(){
                         }
                     }
 
+                    let loadContent = () => {
+                        $(".iframe-center").fadeOut(500, function(){
+                            // Loads in content
+                            if($(e.currentTarget).hasClass("music")){
+                                var iframes = document.getElementsByClassName("deferred-iframe");
+                                iframes[0].onload = function(){
+                                    iframes[1].onload = $(".iframe-center").fadeIn(800);
+                                }
+                                iframes[0].src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/20292982&color=%23fca3fc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+                                iframes[1].src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/516171873&color=%23fca3fc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+                                // $(".iframe-center").fadeIn(800);
+                            }
+                        });
+                    }
+
                     // This function is fucking spaghetti dont even try to understand this
                     // Cycles through each button to figure out new positioning
                     let addAni = () => {
@@ -203,23 +221,11 @@ function activeAbout(){
                         this.className += " abt-top";
                     }
                     
+                    await loadContent();
                     await removeAni();
                     await addAni();
 
                 })();
-                
-                $(".iframe-center").fadeOut(500, function(){
-                    // Loads in content
-                    if($(e.currentTarget).hasClass("music")){
-                        var iframes = document.getElementsByClassName("deferred-iframe");
-                        iframes[0].onload = function(){
-                            iframes[1].onload = $(".iframe-center").fadeIn(800);
-                        }
-                        iframes[0].src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/20292982&color=%23fca3fc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
-                        iframes[1].src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/516171873&color=%23fca3fc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
-                        // $(".iframe-center").fadeIn(800);
-                    }
-                });
             }
 
             e.currentTarget.addEventListener("animationend", function(e){

@@ -1,3 +1,3 @@
 ##BUNGALO
 
-bungalo WIP
+a work in progress...

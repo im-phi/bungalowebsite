@@ -391,6 +391,7 @@ body{
 
 .iframe-center {
     display: none;
+    /* visibility: hidden; */
     padding: 40px;
     text-align: center;
 }
@@ -400,7 +401,7 @@ body{
     width: 25%;
     height: 300px;
     display: inline-block;
-    margin: 10px;
+    margin: 10px 55px;
     border: #FCA3FC 2px solid;
 }
 
