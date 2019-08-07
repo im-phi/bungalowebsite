@@ -405,24 +405,6 @@ body{
     border: #FCA3FC 2px solid;
 }
 
-.fadeIn {
-    animation-name: fadeIn;
-    animation-duration: .8s;
-    animation-fill-mode: forwards
-}
-
-.fadeOut {
-    animation-name: fadeOut;
-    animation-duration: .8s;
-    animation-fill-mode: forwards
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+.rotate {
+    transform: rotateZ(360deg);
 }

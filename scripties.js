@@ -24,7 +24,7 @@
 
 window.addEventListener("optimizedScroll", function() { 
     if(window.location.href != "/index.html#about"){
-        // Added spin class just for rotating the spiral
+        // Added spin class just for rotating the spiral 
         $(".spin").css('-webkit-transform','rotate('+($(window).scrollTop()/8)+'deg)');
     }
 });
@@ -227,6 +227,7 @@ function activeAbout(){
 
                 })();
             }
+            animateBackgroundAbout();
 
             e.currentTarget.addEventListener("animationend", function(e){
                 // Deletes previous destination location for animating
@@ -240,4 +241,22 @@ function activeAbout(){
             });
         });
     }
+}
+
+function animateBackgroundAbout(){
+    $("#background").velocity({
+        width: "259px",
+    }, { 
+        duration: 875, 
+        easing: "swing", 
+        start: function(){
+            $('#background').className += " rotate";
+        }
+    });
+    $("#background").velocity({
+        width: "1600px",
+    }, { 
+        duration: 375, 
+        easing: "swing", 
+    });
 }
