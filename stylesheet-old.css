@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
+
+/* _____________________________________ */
+/* _____________________________________ */
+/* __________UNIVERSAL STYLING__________ */
+/* _____________________________________ */
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #3D003D; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(173, 0, 173); 
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(41, 0, 41); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #FCA3FC;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: none;
+    text-decoration: none;
+}
+
+body{
+    /* overflow: hidden; */
+	background: black;
+    font-family: "Playfair Display";
+}
+
+#main-content {
+    display: none;
+}
+
+#background {
+    will-change: transform;
+	width: 90%;
+    left: -26%;
+    top: -13%;
+    z-index: -1;
+    position: fixed;
+    opacity: 0.4;
+    /*transition: transform 700ms ease-in-out;*/
+    pointer-events: none;
+}
+
+#Bungalo {
+    width: 27%;
+	padding: 25px 25px 15px 25px;
+}
+
+#circle-animation{
+    will-change: transform;
+}
+
+.navbar {
+    text-align: center;
+    font: bold 1.6em "Playfair Display";
+    word-spacing: 60px;
+    padding: 15px;
+}
+
+.navbar ul{
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li{
+    cursor: pointer;
+    display: inline;
+}
+
+.navbar li:nth-child(1) {
+    text-decoration: line-through;
+}
+
+.navbar li:nth-child(2) {
+    text-decoration: line-through;
+}
+
+.navbar li:nth-child(4) {
+    text-decoration: line-through;
+}
+
+
+.navbar a:hover{
+    color: #3D003D;
+    transition: .2s;
+}
+
+.section {
+	padding-bottom: 8%;
+}
+ 
+.header {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 600;
+    padding: .9%;
+}
+
+.subtext {
+    text-align: center;
+    font-size: .85em;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.center {
+	display: block;
+	margin: auto;
+}
+
+.left {
+	display: inline-block;
+	margin: 5%;
+	padding: 20px;
+	width: 28%;
+}
+
+@media only screen and (max-width: 370px) {
+	#bg {
+		width: 100%;
+	}
+}
+
+/* _____________________________________ */
+/* _____________________________________ */
+/* ____________HOME STYLING_____________ */
+/* _____________________________________ */
+
+#circle-animation {
+    position: fixed;
+    width: 10%;
+    right: 0;
+    top: 0;
+    padding: 1em;
+}
+.nardoandvid {
+	position: relative;
+    padding-bottom: 26%;
+    margin: 80px;
+}
+
+.nardo {
+	margin: auto;
+    position: absolute;
+    left: 47%;
+    top: 23%;
+    width: 28%;
+}
+
+.home-iframe { 
+    display: block;
+    margin: 0 auto;
+    border: #FCA3FC 2px solid;
+    width: 80%;
+}
+
+#mitti {
+	width: 35%;
+	padding: 25px;
+}
+
+.addtocart {
+    font-size: 1.3em;
+    border: solid;
+    border-color: #FCA3FC;
+    text-align: center;
+    padding: 8px 20px 8px 20px;
+	width: 125px;
+	margin: auto;
+	display: block;
+	transition: 0.2s;
+}
+
+.addtocart:hover {
+	background: #FCA3FC;
+	color: black;
+}
+
+.soundcloud-iframe {
+    height: 500px;
+}
+
+#music-section {
+    margin: auto;
+    width: 56%;
+}
+
+.video {
+	display: block;
+    margin: auto;
+    border: solid;
+    position: absolute;
+    left: 26%;
+    border-color: #dc94f3;
+    width: 27%;
+    height: 78%;
+}
+
+/* _____________________________________ */
+/* _____________________________________ */
+/* ____________ABOUT STYLING____________ */
+/* _____________________________________ */
+
+#slogan {
+    font-size: 1.4em;
+    position: absolute;
+    top: 40%;
+    left: 13%;
+}
+
+#about-button-container {
+    position: relative;
+    margin: 90px 0px;
+}
+
+.btn {
+    position: absolute;
+    margin: auto;
+    /* transform: translate(-50%, -50%); */
+    /* transform: translateY(25px); */
+    font: bold 1.4em "Playfair Display";
+    background-color: transparent;
+    height: 93px;
+    width: 93px;
+    border: 2px dashed #FCA3FC;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+/* "what button are we on" active */
+.button-active {
+    color: black;
+    background-color: #FCA3FC;
+    border-color: black;
+    z-index: 999;
+}
+
+/* Click active */
+#about-button-container > .btn:active {
+    color: #FCA3FC;
+    background-color: transparent;
+    border-color: #FCA3FC;
+    transition: 200ms ease-out;
+}
+
+#about-button-container > button:hover{
+    color: black;
+    background-color: #FCA3FC;
+    border-color: black;
+    transition: 200ms ease-out;
+}
+
+/* Initial button locations */
+.music {
+    will-change: transform;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.film {
+    will-change: transform;
+    top: 700px;
+    right: 21%;
+    bottom: 0;
+    left: 0;
+}
+
+.dance {
+    will-change: transform;
+    top: 700px;
+    right: 0;
+    bottom: 0;
+    left: 21%;
+}
+
+/* Destination button locations */
+.loc-top {
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.loc-left {
+    top: 900px;
+    right: 72%;
+    left: 0;
+}
+
+.loc-right {
+    top: 900px;
+    right: 0;
+    left: 72%;
+}
+
+/* Animation Classes */
+.abt-top {
+    animation-name: toTop;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards
+}
+
+.abt-left {
+    animation-name: toLeft;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+}
+
+.abt-right {
+    animation-name: toRight;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes for Animations */
+@keyframes toTop {
+    40%, 70% {
+        top: 465px;
+        right: 0;
+        left: 0;
+    }
+    to {
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+@keyframes toLeft {
+    40%, 70% {
+        top: 465px;
+        right: 0;
+        left: 0;
+    }
+    to {
+        top: 900px;
+        right: 72%;
+        left: 0;
+    }
+}
+
+@keyframes toRight {
+    40%, 70% {
+        top: 465px;
+        right: 0;
+        left: 0;
+    }
+    to {
+        top: 900px;
+        right: 0;
+        left: 72%;
+    }
+}
+
+/* Spiral animation class */
+#background.about-clicked{
+    will-change: transform;
+    position: absolute;
+    text-align: center;
+	/* width: 465px;
+    left: 50%; */
+    /* left: 50%;
+    top: 525px; */
+    transform: translate(-50%, -50%);
+}
+
+.iframe-center {
+    display: none;
+    /* visibility: hidden; */
+    padding: 40px;
+    text-align: center;
+}
+
+.desmond, .aku {
+    /* visibility: hidden; */
+    width: 25%;
+    height: 300px;
+    display: inline-block;
+    margin: 10px 55px;
+    border: #FCA3FC 2px solid;
+}
+
+.rotate {
+    transform: rotateZ(360deg);
+}
