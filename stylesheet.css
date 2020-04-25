@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Raleway:400')
 /* _____________________________________ */
 /* _____________________________________ */
 /* __________GENERAL STYLING____________ */
@@ -39,7 +39,7 @@ a {
 body{
     /* overflow: hidden; */
 	background: black;
-    font-family: "Playfair Display";
+    font-family: "Raleway";
 }
 
 #main-content {
@@ -68,11 +68,12 @@ body{
 }
 
 .section img {
-    width: 10%;
+    width: 15%;
 }
 
 #stream-container {
     display: inline;
+    text-align: center;
 }
 
 .image {
