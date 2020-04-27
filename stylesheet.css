@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Raleway:400')
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Raleway:400');
 /* _____________________________________ */
 /* _____________________________________ */
 /* __________GENERAL STYLING____________ */
@@ -46,71 +46,173 @@ body{
     display: none;
 }
 
-#background {
-    will-change: transform;
-	width: 90%;
-    left: -26%;
-    top: -13%;
-    z-index: -1;
-    position: fixed;
-    opacity: 0.4;
-    /*transition: transform 700ms ease-in-out;*/
-    pointer-events: none;
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    
+    #main-content {
+        display: none;
+    }
+
+    #background {
+        will-change: transform;
+        width: 90%;
+        left: -26%;
+        top: -13%;
+        z-index: -1;
+        position: fixed;
+        opacity: 0.75;
+        /*transition: transform 700ms ease-in-out;*/
+        pointer-events: none;
+    }
+    
+    #Bungalo {
+        width: 40%;
+    }
+    
+    .section {
+        padding-bottom: 8%;
+    }
+
+    .section img {
+        width: 5%;
+    }
+
+    #stream-section {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .cover-icon-grid {
+        display: grid;
+        grid-template-columns: 85% 15%;
+    }
+
+    .stream-icon {
+        padding-top: 5%;
+    }
+    #cover {
+        width: 100%;
+    }
+
+    .desktop-center {
+        width: 50%;
+        padding-left: 7%;
+        padding-top: 2%;
+    }
+    
+    .fab {
+        font-size: 4.20vw; /* lit */
+        padding-top: 4%;
+    }
+
+    .icon-grid-desktop {
+        display: grid;
+        text-align: center;
+
+    }
+    .header {
+        text-align: center;
+        font-size: 8vw;
+        font-weight: 600;
+    }
+
+    .subtext {
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .center {
+        display: block;
+        margin: auto;
+    }
+    .icon-grid-mobile {
+        display: none; 
+    }
 }
 
-#Bungalo {
-    width: 75%;
-	padding: 25px 25px 15px 25px;
+@media only screen and (max-width: 767px) {
+    /* phones */
+    #background {
+        will-change: transform;
+        width: 170%;
+        left: -35%;
+        top: 1%;
+        z-index: -1;
+        position: fixed;
+        opacity: 0.75;
+        /*transition: transform 700ms ease-in-out;*/
+        pointer-events: none;
+    }
+    
+    #Bungalo {
+        width: 75%;
+        padding: 3% 1% 3% 1%;
+    }
+    
+    .section {
+        padding-bottom: 8%;
+    }
+    
+    .section img {
+        width: 15%;
+    }
+
+    #spotlight-section {
+        text-align: center;
+    }
+    
+    #release-section1 {
+        display: inline-block;
+    }
+
+    .stream-pic {
+        display: inline-block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 40%;
+    }
+    
+    .center {
+        display: block;
+        margin: auto;
+    }
+    
+    #cover {
+        width: 66%;
+        padding-bottom:2%;
+    }
+
+    .header {
+        text-align: center;
+        font-size: 10vw;
+        font-weight: 600;
+    }
+
+    .subtext {
+        text-align: center;
+        font-size: 2.9vw;
+        padding-bottom: 4%;
+    }
+    .icon-grid-desktop {
+        display: none;
+    }
+    .icon-grid-mobile {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-right: 8%;
+        padding-left: 6%;
+    }
+
+    .stream-icon {
+        padding: 8%;
+    }
+
+    .fab {
+        font-size: 19vw;
+    }
+    
 }
 
-.section {
-	padding-bottom: 8%;
-}
-
-.section img {
-    width: 15%;
-}
-
-#stream-container {
-    display: inline;
-    text-align: center;
-}
-
-.image {
-    float: left;
-}
-
-.stream-pic {
-    display: inline-block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 40%;
-}
-
-.header {
-    text-align: center;
-    font-size: 8vw;
-    font-weight: 600;
-    padding: .9%;
-}
-
-.subtext {
-    text-align: center;
-    font-size: 2.5vw;
-}
-
-.center {
-	display: block;
-	margin: auto;
-}
-
-@media only screen and (max-width: 370px) {
-	#bg {
-		width: 100%;
-	}
-}
-
-#cover {
-	width: 66%;
-	padding: 25px;
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
 }
