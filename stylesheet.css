@@ -46,71 +46,124 @@ body{
     display: none;
 }
 
-#background {
-    will-change: transform;
-	width: 90%;
-    left: -26%;
-    top: -13%;
-    z-index: -1;
-    position: fixed;
-    opacity: 0.4;
-    /*transition: transform 700ms ease-in-out;*/
-    pointer-events: none;
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    
+    #main-content {
+        display: none;
+    }
+
+    #background {
+        will-change: transform;
+        width: 90%;
+        left: -26%;
+        top: -13%;
+        z-index: -1;
+        position: fixed;
+        opacity: 0.4;
+        /*transition: transform 700ms ease-in-out;*/
+        pointer-events: none;
+    }
+    
+    #Bungalo {
+        width: 500px;
+    }
+    
+    .section {
+        padding-bottom: 8%;
+    }
+
+    .section img {
+        width: 5%;
+    }
+
+    #stream-section {
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .stream-pic {
+        display: inline-block;
+        width: 1000px;
+    }
+    
+    #cover {
+        padding-top: 20px;
+        width: 500px;
+    }
+
+    .header {
+        text-align: center;
+        font-size: 4em;
+        font-weight: 600;
+        padding: .5%;
+    }
+
+    .subtext {
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    .center {
+        display: block;
+        margin: auto;
+    }
 }
 
-#Bungalo {
-    width: 75%;
-	padding: 25px 25px 15px 25px;
+@media only screen and (max-width: 767px) {
+    /* phones */
+    #background {
+        will-change: transform;
+        width: 90%;
+        left: -26%;
+        top: -13%;
+        z-index: -1;
+        position: fixed;
+        opacity: .4;
+        /*transition: transform 700ms ease-in-out;*/
+        pointer-events: none;
+    }
+    
+    #Bungalo {
+        width: 75%;
+        padding: 25px 25px 15px 25px;
+    }
+    
+    .section {
+        padding-bottom: 8%;
+    }
+    
+    .section img {
+        width: 15%;
+    }
+
+    #spotlight-section {
+        text-align: center;
+    }
+    
+    #release-section1 {
+        display: inline-block;
+    }
+
+    .stream-pic {
+        display: inline-block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 40%;
+    }
+    
+    .center {
+        display: block;
+        margin: auto;
+    }
+    
+    #cover {
+        width: 66%;
+        padding: 25px;
+    }
 }
 
-.section {
-	padding-bottom: 8%;
-}
-
-.section img {
-    width: 15%;
-}
-
-#stream-container {
-    display: inline;
-    text-align: center;
-}
-
-.image {
-    float: left;
-}
-
-.stream-pic {
-    display: inline-block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 40%;
-}
-
-.header {
-    text-align: center;
-    font-size: 8vw;
-    font-weight: 600;
-    padding: .9%;
-}
-
-.subtext {
-    text-align: center;
-    font-size: 2.5vw;
-}
-
-.center {
-	display: block;
-	margin: auto;
-}
-
-@media only screen and (max-width: 370px) {
-	#bg {
-		width: 100%;
-	}
-}
-
-#cover {
-	width: 66%;
-	padding: 25px;
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
 }
