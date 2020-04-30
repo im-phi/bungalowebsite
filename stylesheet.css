@@ -46,12 +46,88 @@ body{
     display: none;
 }
 
-@media only screen and (min-width: 768px) {
-    /* tablets and desktop */
-    
-    #main-content {
-        display: none;
+@media only screen and (min-width: 1245px) {
+
+    #background {
+        will-change: transform;
+        width: 90%;
+        left: -26%;
+        top: -13%;
+        z-index: -1;
+        position: fixed;
+        opacity: 0.75;
+        /*transition: transform 700ms ease-in-out;*/
+        pointer-events: none;
     }
+    
+    #Bungalo {
+        width: 28%;
+    }
+    
+    .section {
+        padding-bottom: 8%;
+    }
+
+    .section img {
+        width: 5%;
+    }
+
+    #stream-section {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .cover-icon-grid {
+        display: grid;
+        grid-template-columns: 85% 15%;
+    }
+
+    .stream-icon {
+        padding-top: 5%;
+    }
+    #cover {
+        width: 100%;
+    }
+
+    .desktop-center {
+        width: 35%;
+        padding-left: 4.75%;
+        padding-top: 1%;
+    }
+    
+    .fab {
+        font-size: 3.3vw; /* lit */
+        padding-top: 4%;
+    }
+
+    .icon-grid-desktop {
+        display: grid;
+        text-align: center;
+
+    }
+
+    .header {
+        text-align: center;
+        font-size: 4.5vw;
+        font-weight: 600;
+    }
+
+    .subtext {
+        text-align: center;
+        font-size: 1.25vw;
+    }
+
+    .center {
+        display: block;
+        margin: auto;
+    }
+    .icon-grid-mobile {
+        display: none; 
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1244px){
+    /* tablets and desktop */
 
     #background {
         will-change: transform;
@@ -130,7 +206,7 @@ body{
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px){
     /* phones */
     #background {
         will-change: transform;
@@ -211,8 +287,4 @@ body{
         font-size: 19vw;
     }
     
-}
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    /* portrait phones */
 }
