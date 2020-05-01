@@ -258,6 +258,7 @@ body{
     
     #release-section1 {
         display: inline-block;
+        width: 100%;
     }
 
     .stream-pic {
@@ -272,13 +273,8 @@ body{
         margin: auto;
     }
     
-    .cover-container-small {
-        display: block;
-        width: 100%;
-    }
-
     #cover_small {
-        width: 100%;
+        width: 66%;
         padding-bottom:2%;
     }
 
