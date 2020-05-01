@@ -46,7 +46,15 @@ body{
     display: none;
 }
 
+#cover, #cover_small {
+    display: none;
+}
+
 @media only screen and (min-width: 1245px) {
+
+    #cover {
+        display: block;
+    }
 
     #background {
         will-change: transform;
@@ -85,6 +93,7 @@ body{
     .stream-icon {
         padding-top: 5%;
     }
+
     #cover {
         width: 100%;
     }
@@ -129,6 +138,10 @@ body{
 @media only screen and (min-width: 768px) and (max-width: 1244px){
     /* tablets and desktop */
 
+    #cover_small {
+        display: block;
+    }
+
     #background {
         will-change: transform;
         width: 90%;
@@ -166,7 +179,8 @@ body{
     .stream-icon {
         padding-top: 5%;
     }
-    #cover {
+
+    #cover_small {
         width: 100%;
     }
 
@@ -208,6 +222,11 @@ body{
 
 @media only screen and (max-width: 767px){
     /* phones */
+
+    #cover_small {
+        display: block;
+    }
+
     #background {
         will-change: transform;
         width: 170%;
@@ -253,8 +272,18 @@ body{
         margin: auto;
     }
     
+    .cover-container-small {
+        display: block;
+        width: 100%;
+    }
+
+    #cover_small {
+        width: 100%;
+        padding-bottom:2%;
+    }
+
     #cover {
-        width: 66%;
+        width: 100%;
         padding-bottom:2%;
     }
 
