@@ -42,6 +42,11 @@ body{
     font-family: "Raleway";
 }
 
+.center {
+    display: block;
+    margin: auto;
+}
+
 #main-content {
     display: none;
 }
@@ -66,6 +71,10 @@ body{
         opacity: 0.75;
         /*transition: transform 700ms ease-in-out;*/
         pointer-events: none;
+    }
+
+    .menu { 
+        display: block;
     }
     
     #Bungalo {
@@ -112,7 +121,6 @@ body{
     .icon-grid-desktop {
         display: grid;
         text-align: center;
-
     }
 
     .header {
@@ -126,10 +134,6 @@ body{
         font-size: 1.25vw;
     }
 
-    .center {
-        display: block;
-        margin: auto;
-    }
     .icon-grid-mobile {
         display: none; 
     }
@@ -198,8 +202,8 @@ body{
     .icon-grid-desktop {
         display: grid;
         text-align: center;
-
     }
+
     .header {
         text-align: center;
         font-size: 8vw;
@@ -211,10 +215,6 @@ body{
         font-size: 2vw;
     }
 
-    .center {
-        display: block;
-        margin: auto;
-    }
     .icon-grid-mobile {
         display: none; 
     }
@@ -267,12 +267,7 @@ body{
         margin-left: auto;
         width: 40%;
     }
-    
-    .center {
-        display: block;
-        margin: auto;
-    }
-    
+        
     #cover_small {
         width: 66%;
         padding-bottom:2%;
@@ -294,9 +289,11 @@ body{
         font-size: 2.9vw;
         padding-bottom: 4%;
     }
+
     .icon-grid-desktop {
         display: none;
     }
+    
     .icon-grid-mobile {
         display: grid;
         grid-template-columns: 50% 50%;
