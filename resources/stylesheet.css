@@ -172,7 +172,7 @@ footer {
         font-size: 1.25vw;
     }
 
-    .icon-grid-mobile {
+    .icon-flex-mobile {
         display: none; 
     }
 }
@@ -280,7 +280,7 @@ footer {
         font-size: 2vw;
     }
 
-    .icon-grid-mobile {
+    .icon-flex-mobile {
         display: none; 
     }
 }
@@ -388,11 +388,13 @@ footer {
         display: none;
     }
 
-    .icon-grid-mobile {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        padding-right: 8%;
-        padding-left: 6%;
+    .icon-flex-mobile {
+        display: flex;
+        /* grid-template-columns: 50% 50%; */
+        flex-wrap: wrap;
+        justify-content: center;
+        /* padding-right: 8%;
+        padding-left: 6%; */
     }
 
     .stream-icon {
