@@ -152,6 +152,7 @@ footer {
     .icon-grid-desktop {
         display: grid;
         text-align: center;
+        align-items: center;
     }
 
     .header {
