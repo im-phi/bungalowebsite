@@ -67,6 +67,7 @@ footer {
     text-align: center;
     line-height: 40px;
     font-size: .8em;
+    opacity: .5;
 }
 
 @media only screen and (min-width: 1170px) {
