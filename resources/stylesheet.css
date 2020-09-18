@@ -155,7 +155,7 @@ footer {
     }
 
     .icon-flex-desktop .stream-icon {
-        padding: 1.5vw 3vw;
+        padding: 1.75vw 3vw;
     }
 
     .cover-icon-grid {
@@ -307,16 +307,12 @@ footer {
     }
 
     .icon-flex-desktop .stream-icon {
-        padding: 1.5vw 3vw;
+        padding: 1.75vw 3vw;
     }
 
     .cover-icon-grid {
         display: grid;
         grid-template-columns: 85% 15%;
-    }
-
-    .stream-icon {
-        padding-top: 5%;
     }
 
     #cover-small {
