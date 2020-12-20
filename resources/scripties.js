@@ -41,8 +41,14 @@ $('.emoji-button').on('click', function(){
     if ($(this).is('#fire-emoji') && !$(this).hasClass('selected')){
 
         // Fade heatstroke in and wateriswet out
-        $('#fire-video').fadeIn(500);
-        $('#water-video').fadeOut(500);
+        if($(window).width() <= 767) {
+            $('#fire-video-mobile').fadeIn(500);
+            $('#water-video-mobile').fadeOut(500);
+        }
+        else {
+            $('#fire-video').fadeIn(500);
+            $('#water-video').fadeOut(500);
+        }
 
         // Change color of streaming icons
         $(".water-fire-icons .fab").removeClass('water-color').addClass('fire-color');
@@ -62,8 +68,14 @@ $('.emoji-button').on('click', function(){
     } else if ($(this).is('#water-emoji') && !$(this).hasClass('selected')){
 
         // Fade wateriswet in and heatstroke out
-        $('#water-video').fadeIn(500);
-        $('#fire-video').fadeOut(500);
+        if($(window).width() <= 767) {
+            $('#water-video-mobile').fadeIn(500);
+            $('#fire-video-mobile').fadeOut(500);
+        }
+        else {
+            $('#water-video').fadeIn(500);
+            $('#fire-video').fadeOut(500);
+        }
 
         // Change color of streaming icons
         $(".water-fire-icons .fab").removeClass('fire-color').addClass('water-color');

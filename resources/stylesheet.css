@@ -83,7 +83,11 @@ footer {
 
     /* WATER/HEAT RELEASE SECTION */
 
-    .emoji-container {
+    .emoji-container-mobile {
+        display: none;
+    }
+
+    .emoji-container-desktop {
         margin: 0;
         position: absolute;
         height: 75em;
@@ -290,6 +294,70 @@ footer {
 @media only screen and (min-width: 768px) and (max-width: 1169px){
     /* tablets and desktop */
 
+    /* WATER/HEAT RELEASE SECTION */
+
+    .emoji-container-mobile {
+        display: none;
+    }
+
+    .emoji-container-desktop {
+        margin: 0;
+        position: absolute;
+        height: 75em;
+        /* width: 100vw; */
+        width: 100%;
+        /* top: 8.25vw;
+        left: -8vw; */
+        top: 22.25vw;
+        overflow:hidden;
+    }
+
+    .emoji-button {
+        position: relative;
+        border-radius: 50%;
+        height: 50%;
+        padding: .5em;
+        opacity: 0.5;
+        left: 16.5vw;
+    }
+
+    .emoji-button:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .emoji-button.selected {
+        opacity: 1;
+    }
+
+    #fire-video {
+        display: block;
+    }
+
+    #water-video {
+        display: none;
+    }
+
+    .fire-color{
+        color: #ffca37;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+        
+    .water-color{
+        color: #8de4ff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    /* GENERAL STYLING */
+
     #cover-small {
         display: block;
     }
@@ -307,7 +375,7 @@ footer {
     }
     
     #Bungalo {
-        width: 40%;
+        width: 32%;
         padding: 1vw;
     }
     
@@ -434,7 +502,68 @@ footer {
 
 @media only screen and (max-width: 767px){
     /* phones */
+    /* WATER/HEAT RELEASE SECTION */
 
+    .emoji-container-desktop {
+        display: none;
+    }
+
+    .emoji-container-mobile {
+        margin-top: 10px;
+        position: relative;
+        height: auto;
+        width: 90%;
+        overflow:hidden;
+    }
+
+    .emoji-button {
+        position: relative;
+        border-radius: 50%;
+        height: 50%;
+        padding: .5em;
+        opacity: 0.5;
+        left: 6%;
+    }
+
+    .emoji-button:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .emoji-button.selected {
+        opacity: 1;
+    }
+
+    #fire-video-mobile {
+        display: block;
+    }
+
+    #water-video-mobile {
+        display: none;
+        /* I don't know why this works */
+        /* but it centers the video */
+        left: 0%;
+    }
+
+    .fire-color{
+        color: #ffca37;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+        
+    .water-color{
+        color: #8de4ff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    /* GENERAL STYLING */
     #cover-small {
         display: block;
     }
