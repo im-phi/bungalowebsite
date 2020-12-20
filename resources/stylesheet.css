@@ -81,6 +81,66 @@ footer {
 
 @media only screen and (min-width: 1170px) {
 
+    /* WATER/HEAT RELEASE SECTION */
+
+    .emoji-container {
+        margin: 0;
+        position: absolute;
+        height: 75em;
+        /* width: 100vw; */
+        width: 100%;
+        /* top: 8.25vw;
+        left: -8vw; */
+        top: 19.25vw;
+        overflow:hidden;
+    }
+
+    .emoji-button {
+        position: relative;
+        border-radius: 50%;
+        height: 50%;
+        padding: .5em;
+        opacity: 0.5;
+        left: 16.5vw;
+    }
+
+    .emoji-button:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .emoji-button.selected {
+        opacity: 1;
+    }
+
+    #fire-video {
+        display: block;
+    }
+
+    #water-video {
+        display: none;
+    }
+
+    .fire-color{
+        color: #ffca37;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+        
+    .water-color{
+        color: #8de4ff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    /* GENERAL RELEASE SECTION */
+
     #cover {
         display: block;
     }
@@ -98,7 +158,7 @@ footer {
     }
     
     #Bungalo {
-        width: 28%;
+        width: 20%;
         padding: 1vw;
     }
 
@@ -162,10 +222,6 @@ footer {
         display: grid;
         grid-template-columns: 85% 15%;
     }
-
-    /* .stream-icon {
-        padding-top: 5%;
-    } */
 
     #cover {
         width: 100%;
@@ -265,8 +321,6 @@ footer {
         top: 10px;
         margin: .5em .5em 0 0;
         padding: .5em;
-        /* border: 1px solid #FCA3FC;
-        border-radius: 4px; */
     }
 
     .social-icon.fab {
@@ -509,10 +563,6 @@ footer {
         justify-content: center;
     }
 
-    /* .icon-flex-mobile .stream-icon {
-        padding: 1vw 3vw;
-    } */
-
     .desktop-center-video {
         display: none;
     }
@@ -524,10 +574,6 @@ footer {
         padding-top: 1%;
         padding-bottom: 42.1875%;
     }
-
-    /* .spacing-offset {
-        padding: 50%;
-    } */
 
     .stream-icon {
         padding: 8%;

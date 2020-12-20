@@ -37,6 +37,8 @@ bungalo | official website
 
 <body>
 
+	<!-- NAVBAR FOR SOCIAL MEDIA -->
+
 	<nav class="menu">
 		<a href="index.html"><img id="Bungalo" class="center" src="gifs/bungalo.gif" ></a>
 		<div class="social-panel-desktop">
@@ -63,6 +65,8 @@ bungalo | official website
 		</div>
 	</nav>
 
+	<!-- BACKGROUND SPIRAL -->
+
 	<img id="background" class="spin" src="images/fluffy.svg">
 	<script src="/resources/lottie.js"></script>
 
@@ -71,26 +75,45 @@ bungalo | official website
 		<div id="main-content">
 
 			<div id="spotlight-section">
+
+				<!-- WATER/HEAT RELEASE -->
+
 				<div class="section" id="release-section1">
+					<ul class="emoji-container" style="list-style-type: none;">
+						<li>
+							<img class="emoji-button fire-emoji selected" id="fire-emoji"src="/images/wbg_fire_emoji.png" alt="fire"> 
+						</li>
+						<li>
+							<img class="emoji-button water-emoji" id="water-emoji" src="/images//wbg_droplet_emoji.png" alt="water">
+						</li>
+					</ul>
 					<div class="desktop-center-video center">
-						<iframe class="music-video" src="https://www.youtube.com/embed/kPy2YfJMitA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe class="music-video" id="water-video" src="https://www.youtube.com/embed/eIdnXltjRPU" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe class="music-video fire-animation" id="fire-video" src="https://www.youtube.com/embed/T_1fsLpRmq0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
-					<div class="desktop-center-video-icons center">
+
+					<!-- STREAMING LINKS DESKTOP -->
+					<div class="desktop-center-video-icons center water-fire-icons">
 						<div class="icon-flex-desktop">
-							<a href="https://open.spotify.com/track/0hgiAjEreapYOSWCQx8jwO?si=G8WY4qH1Q3OBdnaNTrQHJQ" target="_blank"  class="stream-icon">
-								<i class="fab fa-spotify"></i>
+							<a href="https://www.reddit.com/r/bboy" target="_blank"  class="stream-icon wh-spotify">
+								<i class="fab fa-spotify fire-color"></i>
 							</a>
-							<a href="https://music.apple.com/us/album/closer-single/1529803228" target="_blank"  class="stream-icon">
-								<i class="fab fa-apple"></i>
+							<a href="https://music.apple.com/us/album/closer-single/1529803228" target="_blank"  class="stream-icon wh-apple">
+								<i class="fab fa-apple fire-color"></i>
 							</a>
-							<a href="https://bungalo.bandcamp.com/track/closer" target="_blank"  class="stream-icon">
-								<i class="fab fa-bandcamp"></i>
+							<a href="https://bungalo.bandcamp.com/track/closer" target="_blank"  class="stream-icon wh-bandcamp">
+								<i class="fab fa-bandcamp fire-color"></i>
 							</a>
-							<a href="https://soundcloud.com/bungalocollective/closer" target="_blank"  class="stream-icon">
-								<i class="fab fa-soundcloud"></i>
+							<a href="https://soundcloud.com/bungalocollective/closer" target="_blank"  class="stream-icon wh-soundcloud">
+								<i class="fab fa-soundcloud fire-color"></i>
 							</a>
 						</div>
 					</div>
+
+					
+
+					<!-- STREAMING LINKS MOBILE-->
+
 					<div class="section" id="stream-section">
 						<div class="mobile-center-video center">
 							<iframe class="music-video center" src="https://www.youtube.com/embed/kPy2YfJMitA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -115,11 +138,68 @@ bungalo | official website
 								<i class="fab fa-soundcloud"></i>
 							</a>
 						</div>
+					</div>
+				</div>	
+
+				<!-- CLOSER RELEASE -->
+
+				<!-- YOUTUBE VIDEO -->
+
+				<div class="section" id="release-section1">
+					<div class="desktop-center-video center">
+						<iframe class="music-video" src="https://www.youtube.com/embed/kPy2YfJMitA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="desktop-center-video-icons center">
+						<div class="icon-flex-desktop">
+							<a href="https://open.spotify.com/track/0hgiAjEreapYOSWCQx8jwO?si=G8WY4qH1Q3OBdnaNTrQHJQ" target="_blank"  class="stream-icon">
+								<i class="fab fa-spotify"></i>
+							</a>
+							<a href="https://music.apple.com/us/album/closer-single/1529803228" target="_blank"  class="stream-icon">
+								<i class="fab fa-apple"></i>
+							</a>
+							<a href="https://bungalo.bandcamp.com/track/closer" target="_blank"  class="stream-icon">
+								<i class="fab fa-bandcamp"></i>
+							</a>
+							<a href="https://soundcloud.com/bungalocollective/closer" target="_blank"  class="stream-icon">
+								<i class="fab fa-soundcloud"></i>
+							</a>
+						</div>
+					</div>
+
+					<!-- STREAMING LINKS -->
+
+					<div class="section" id="stream-section">
+						<div class="mobile-center-video center">
+							<iframe class="music-video center" src="https://www.youtube.com/embed/kPy2YfJMitA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="header-mobile" style="padding-top: 4%;">
+							C L O S E R
+						</div>
+						<div class="subtext-mobile">
+							O U T &nbsp; N O W
+						</div>
+						<div class="icon-flex-mobile" style="padding: 0 1%;">
+							<a href="https://bungalo.bandcamp.com/track/closer" class="stream-icon">
+								<i class="fab fa-bandcamp"></i>
+							</a>
+							<a href="https://open.spotify.com/track/0hgiAjEreapYOSWCQx8jwO?si=G8WY4qH1Q3OBdnaNTrQHJQ" class="stream-icon">
+								<i class="fab fa-spotify"></i>
+							</a>
+							<a href="https://music.apple.com/us/album/closer-single/1529803228" class="stream-icon">
+								<i class="fab fa-apple"></i>
+							</a>
+							<a href="https://soundcloud.com/bungalocollective/closer" class="stream-icon">
+								<i class="fab fa-soundcloud"></i>
+							</a>
 						</div>
 					</div>
 				</div>	
 
 				<div class="spacing-offset"></div>
+
+				<!-- 2020 RELEASE -->
+
+				<!-- IMAGE -->
 
 				<div class="section" id="release-section1">
 					<div class="desktop-center center">
@@ -151,6 +231,9 @@ bungalo | official website
 					<div class="subtext">
 						O U T &nbsp; N O W
 					</div>
+
+					<!-- STREAMING LINKS -->
+
 					<div class="section" id="stream-section">
 						<div class="icon-flex-mobile">
 							<a href="https://bungalo.bandcamp.com/releases" class="stream-icon">
