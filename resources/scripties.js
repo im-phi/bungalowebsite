@@ -38,6 +38,8 @@ $(document).ready(function(){
 // 
 $('.emoji-button').on('click', function(){
     
+
+    // CHANGE TO HEATSTROKE LINKS
     if ($(this).is('#fire-emoji') && !$(this).hasClass('selected')){
 
         // Check if current media query is mobile or desktop
@@ -69,12 +71,13 @@ $('.emoji-button').on('click', function(){
         $(".water-fire-icons .fab").removeClass('water-color').addClass('fire-color');
 
         // Change link of streaming icons
-        $(".wh-bandcamp").attr("href","https://www.reddit.com/r/politics");
-        $(".wh-spotify").attr("href","https://www.reddit.com/r/bboy");
-        $(".wh-apple").attr("href","https://www.reddit.com/r/memes");
-        $(".wh-soundcloud").attr("href","https://www.reddit.com/");
+        $(".wh-bandcamp").attr("href","https://bungalo.bandcamp.com/track/heatstroke");
+        $(".wh-spotify").attr("href","https://open.spotify.com/track/0wij6w6sEurbuQzkzInU6h?si=7UVcJVcOSQ6sirPL9hZ0Iw");
+        $(".wh-apple").attr("href","https://music.apple.com/us/album/heatstroke/1545156371?i=1545156372");
+        $(".wh-soundcloud").attr("href","https://soundcloud.com/bungalocollective/heatstroke");
 
 
+    // CHANGE TO WATER IS WET LINKS
     } else if ($(this).is('#water-emoji') && !$(this).hasClass('selected')){
 
         // Check if current media query is mobile or desktop
@@ -109,10 +112,10 @@ $('.emoji-button').on('click', function(){
 
 
         // Change link of streaming icons
-        $(".wh-bandcamp").attr("href","https://www.reddit.com/");
-        $(".wh-spotify").attr("href","https://www.reddit.com/r/rutgers");
-        $(".wh-apple").attr("href","https://www.reddit.com/");
-        $(".wh-soundcloud").attr("href","https://www.reddit.com/");
+        $(".wh-bandcamp").attr("href","https://bungalo.bandcamp.com/track/water-is-wet");
+        $(".wh-spotify").attr("href","https://open.spotify.com/track/3jshRKH8eDCvf1HAAacJ4i?si=Ibf1cwJtRPq2T_7Uty9BOw");
+        $(".wh-apple").attr("href","https://music.apple.com/us/album/water-is-wet/1545154286?i=1545154287");
+        $(".wh-soundcloud").attr("href","https://soundcloud.com/bungalocollective/water-is-wet/");
 
     }
 
