@@ -249,7 +249,7 @@ footer {
         position: relative;
         width: 50%;
         height: 0px;
-        padding-top: 1%;
+        margin-top: 1%;
     }
 
     .fab {
@@ -545,6 +545,10 @@ footer {
         left: 0%;
     }
 
+    #wiw-header {
+        opacity: .45;
+    }
+
     .fire-color{
         color: #ffca37;
         -webkit-transition: all 0.5s ease;
@@ -581,7 +585,7 @@ footer {
     }
     
     #Bungalo {
-        width: 75%;
+        width: 70%;
         padding: 3% 1% 1% 1%;
     }
     

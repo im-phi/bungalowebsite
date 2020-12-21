@@ -35,17 +35,32 @@ $(document).ready(function(){
     $("#main-content").fadeIn(1000);
 });
 
-
+// 
 $('.emoji-button').on('click', function(){
     
     if ($(this).is('#fire-emoji') && !$(this).hasClass('selected')){
 
-        // Fade heatstroke in and wateriswet out
+        // Check if current media query is mobile or desktop
         if($(window).width() <= 767) {
+            // Stop heatstroke if currently playing
+            var video = $("#water-video-mobile").attr("src");
+            $("#water-video-mobile").attr("src","");
+            $("#water-video-mobile").attr("src",video);
+            // Fade heatstroke in and wateriswet out
             $('#fire-video-mobile').fadeIn(500);
             $('#water-video-mobile').fadeOut(500);
+            // Change subtext color
+            $("#wh-subtext").removeClass('water-color').addClass('fire-color');
+            // Swap opacities
+            $('#wiw-header').fadeTo(500, .45);
+            $('#hs-header').fadeTo(500, 1);
         }
         else {
+            // Stop heatstroke if currently playing
+            var video = $("#water-video").attr("src");
+            $("#water-video").attr("src","");
+            $("#water-video").attr("src",video);
+            // Fade heatstroke in and wateriswet out
             $('#fire-video').fadeIn(500);
             $('#water-video').fadeOut(500);
         }
@@ -54,25 +69,36 @@ $('.emoji-button').on('click', function(){
         $(".water-fire-icons .fab").removeClass('water-color').addClass('fire-color');
 
         // Change link of streaming icons
+        $(".wh-bandcamp").attr("href","https://www.reddit.com/r/politics");
         $(".wh-spotify").attr("href","https://www.reddit.com/r/bboy");
-        $(".wh-apple").attr("href","https://www.reddit.com/");
-        $(".wh-bandcamp").attr("href","https://www.reddit.com/");
+        $(".wh-apple").attr("href","https://www.reddit.com/r/memes");
         $(".wh-soundcloud").attr("href","https://www.reddit.com/");
-
-        // Stop heatstroke if currently playing
-        var video = $("#water-video").attr("src");
-        $("#water-video").attr("src","");
-        $("#water-video").attr("src",video);
 
 
     } else if ($(this).is('#water-emoji') && !$(this).hasClass('selected')){
 
-        // Fade wateriswet in and heatstroke out
+        // Check if current media query is mobile or desktop
         if($(window).width() <= 767) {
+            // Stop heatstroke if currently playing
+            var video = $("#fire-video-mobile").attr("src");
+            $("#fire-video-mobile").attr("src","");
+            $("#fire-video-mobile").attr("src",video);
+            // Fade wateriswet in and heatstroke out
             $('#water-video-mobile').fadeIn(500);
-            $('#fire-video-mobile').fadeOut(500);
+            $('#fire-video-mobile').fadeOut(500);        
+            // Change subtext color
+            $("#wh-subtext").removeClass('fire-color').addClass('water-color');
+            // Swap opacities
+            $('#hs-header').fadeTo(500, .35);
+            $('#wiw-header').fadeTo(500, 1);
+            
         }
         else {
+            // Stop heatstroke if currently playing
+            var video = $("#fire-video").attr("src");
+            $("#fire-video").attr("src","");
+            $("#fire-video").attr("src",video);
+            // Fade wateriswet in and heatstroke out
             $('#water-video').fadeIn(500);
             $('#fire-video').fadeOut(500);
         }
@@ -80,16 +106,14 @@ $('.emoji-button').on('click', function(){
         // Change color of streaming icons
         $(".water-fire-icons .fab").removeClass('fire-color').addClass('water-color');
 
+
+
         // Change link of streaming icons
+        $(".wh-bandcamp").attr("href","https://www.reddit.com/");
         $(".wh-spotify").attr("href","https://www.reddit.com/r/rutgers");
         $(".wh-apple").attr("href","https://www.reddit.com/");
-        $(".wh-bandcamp").attr("href","https://www.reddit.com/");
         $(".wh-soundcloud").attr("href","https://www.reddit.com/");
 
-        // Stop heatstroke if currently playing
-        var video = $("#fire-video").attr("src");
-        $("#fire-video").attr("src","");
-        $("#fire-video").attr("src",video);
     }
 
     $('.emoji-button').removeClass('selected');
