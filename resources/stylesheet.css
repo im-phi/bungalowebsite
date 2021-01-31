@@ -81,6 +81,12 @@ footer {
 
 @media only screen and (min-width: 1170px) {
 
+    /* 2BASIC RELEASE SECTION */
+
+    .header-2basic {
+        display: none;
+    }
+
     /* WATER/HEAT RELEASE SECTION */
 
     .emoji-container-mobile {
@@ -95,7 +101,7 @@ footer {
         width: 100%;
         /* top: 8.25vw;
         left: -8vw; */
-        top: 19.25vw;
+        top: 66.5vw;
         overflow:hidden;
     }
 
@@ -188,6 +194,11 @@ footer {
     .section {
         padding-top: 1%;
         padding-bottom: 8%;
+    }
+
+    .section-nv {
+        padding-top: 1%;
+        padding-bottom: 3%;
     }
 
     .section img {
@@ -294,6 +305,12 @@ footer {
 @media only screen and (min-width: 768px) and (max-width: 1169px){
     /* tablets and desktop */
 
+    /* 2BASIC RELEASE SECTION */
+
+    .header-2basic {
+        display: none;
+    }
+
     /* WATER/HEAT RELEASE SECTION */
 
     .emoji-container-mobile {
@@ -308,7 +325,7 @@ footer {
         width: 100%;
         /* top: 8.25vw;
         left: -8vw; */
-        top: 22.25vw;
+        top: 68vw;
         overflow:hidden;
     }
 
@@ -502,6 +519,15 @@ footer {
 
 @media only screen and (max-width: 767px){
     /* phones */
+
+    /* 2BASIC RELEASE SECTION */
+
+    .header-2basic {
+        padding-top: 5.25%;
+        font-size: 8.2vw; 
+        font-weight: 600;
+    }
+
     /* WATER/HEAT RELEASE SECTION */
 
     .emoji-container-desktop {
