@@ -1,3 +1,4 @@
-##BUNGALO
+# Bungalo Official Website
 
-a work in progress...
+Source code for the Bungalo Collective official website.
+
